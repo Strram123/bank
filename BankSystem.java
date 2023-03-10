@@ -37,10 +37,10 @@ package bankmanagement;
 			this.balance = balance;
 		}
 		
-		public void setdeposit(int i) {
+		public void setdeposit(int money) {
 			
-			this.deposit=this.balance+i;
-			System.out.println("succesfully Deposited "+i);
+			this.deposit=this.balance+money;
+			System.out.println("succesfully Deposited "+money);
 			
 		}
 		public int getdeposit() {
@@ -49,11 +49,11 @@ package bankmanagement;
 		}
 		
 		
-		public void setwithdraw(int j) {
+		public void setwithdraw(int money) {
 			
-			 if (j <= this.balance )
+			 if (money <= this.balance )
 			 {
-				this.withdraw= this.balance-j; 
+				this.withdraw= this.balance-money; 
 				System.out.println("After Withdrawel  your Balance"+this.withdraw);
 			 }
 			 else
@@ -89,17 +89,17 @@ package bankmanagement;
 				for(int i=0;i<3 ;i++ )
 					{
 					
-					Account ac = new Account();
+					Account account = new Account();
 					System.out.println("Enter Your Name: ");
-					ac.setName(sc.next());
+					account.setName(sc.next());
 					System.out.println("Enter Id: ");
-					ac.setId(sc.nextInt());
+					account.setId(sc.nextInt());
 					System.out.println("Enter accountType: ");		
-					ac.setAccountType(sc.next());
+					account.setAccountType(sc.next());
 					System.out.println("Enter Balance: ");
-					ac.setBalance(sc.nextInt());
+					account.setBalance(sc.nextInt());
 					System.out.println(i+" account Created");
-					list.add(ac);
+					list.add(account);
 					
 					}
 				int choice;
